@@ -7,4 +7,11 @@ resource "aws_instance" "example" {
   tags = {
     Name = "Sample${count.index}"
   }
+  cloud {
+    organization = "ojas"
+
+    workspaces {
+      name = "Terraform"
+    }
+  }
 }
