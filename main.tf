@@ -1,3 +1,4 @@
+terraform {
 resource "aws_instance" "example" {
   count         ="${var.number}"
   ami           ="${var.ami}"
@@ -7,6 +8,7 @@ resource "aws_instance" "example" {
   tags = {
     Name = "Sample${count.index}"
   }
+}
   cloud {
     organization = "ojas"
 
