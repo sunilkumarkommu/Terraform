@@ -1,7 +1,7 @@
 terraform {
    required_providers {
     aws = {
-      source = "./ec2.tf"
+      source = "ec2.tf"
     }
   }
   cloud {
